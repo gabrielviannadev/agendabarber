@@ -26,13 +26,23 @@ class ServiceCard extends StatelessWidget {
                 ],
               ),
               tilePadding: const EdgeInsets.symmetric(horizontal: 16.0),
-              childrenPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+              childrenPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               onExpansionChanged: (value) {},
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("R\$ ${price.toString()}"),
+                    const Spacer(),
+                    GestureDetector(
+                      onTap: () {},
+                      child: const CircleAvatar(
+                        radius: 20.0,
+                        backgroundColor: Colors.grey,
+                        child: Icon(Icons.add, color: Colors.white),
+                      ),
+                    ),
+                    const SizedBox(width: 8.0),
                     ElevatedButton(
                       onPressed: () {},
                       child: const Text('Agendar'),

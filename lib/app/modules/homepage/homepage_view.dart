@@ -11,11 +11,13 @@ class HomePage extends GetView<HomepageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: const Column(
-        children: [
-          HomeHeaderWidget(),
-          BodyHomeWidget(),
-        ],
+      body: const Scrollbar(
+        child: Column(
+          children: [
+            HomeHeaderWidget(),
+            BodyHomeWidget(),
+          ],
+        ),
       ),
     );
   }
